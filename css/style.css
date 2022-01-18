@@ -1,0 +1,86 @@
+.wrapper {
+    margin: auto;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    width: 800px;
+}
+.gamer{
+    display: block;
+
+}
+.name{
+    display: flex;
+    justify-content: center;
+    background-color: #95f5f5;
+    height: 30px;
+    /* width: 100px; */
+    padding: 2px;
+    border: 3px groove #5CCCCC;
+    border-radius: 1px;
+    margin: 10px;
+    font-size: 1.5em
+}
+.panel{
+    display: flex;
+}
+.polygonUser, .polygonComputer{
+    height: 362px;
+    width: 362px;
+    border-radius: 1px;
+    border: 3px groove #5CCCCC;
+    margin: 10px;
+}
+.tablet {
+    display: flex;
+    height: 330px;
+    width: 330px;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 5px;
+    border: 3px groove #006363;
+    border-radius: 3px;
+    background-color: #33CCCC;
+}
+.tablet-step {
+    background-color: #dcdd8e;
+}
+
+.td {
+    display: block;
+    height:26px;
+    width: 26px;
+    background-color: #95f5f5;
+    padding: 1px;
+    border: 1px groove #1D7373;
+    border-radius: 1px;
+    text-align: center;
+    font-size: 1.2em
+}
+
+
+.navigation{
+    background-color: #5CCCCC;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+
+.wounded{
+    background-color: #FFAA00;
+    font-size: 20px
+}
+
+.blunder{
+    background-color: #4160a7;
+    font-size: 20px
+}
+
+.killed{
+    background-color: #FF7400;
+}
+.ships{
+    background-color: rgb(83, 83, 83);
+}

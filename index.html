@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/ship_sea_boat_pirate_sail_ocean_old_adventure_wooden_flag_icon_131598.svg">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="script.js"></script>
+    <title>Battleship</title>
+</head>
+
+<body>
+    <div id='gameBS'>
+        <div class="wrapper">
+            <template>
+                <div class="gamer">
+                    <div class='name cursor-pointer' title='Сменить имя'
+                    @click="modalOpenClose('Введите ваше имя', null, true)">{{nameUser}}</div>
+                    <div id='polygonUser' class="polygonUser" v-bind:class="{'tablet-step': blocked}">
+                    </div>
+                </div>
+
+                <div class="gamer">
+                    <div class='name cursor-pointer' title='Перезапустить игру &#128472;' @click='restart'>{{nameComp}}</div>
+                     <div id='polygonComputer' class="polygonComputer" @click='fireUser'
+                        v-bind:class="{'tablet-step': !blocked}"></div>
+                </div>
+
+
+
+                <div class="modal-overlay" v-bind:class="classActiveModalOverlay">
+                    <div class="modal-window" v-bind:class="classActiveModalWindow">
+                        <div class="modal-header">
+                            <span class="modal-title">{{textHeaderModal}}</span>
+                        </div>
+
+                        <div class="modal-body">
+                            <input v-if="isActiveModalInput" type="text" v-model='nameUser'>
+                            <div v-else>{{textGameVictory}}</div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button @click="modalOpenClose('')">Ok</button>
+                        </div>
+                    </div>
+                </div>
+
+            </template>
+
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
